@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ExpressJS: Linkedin share</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css" media="screen">
+</head>
+<body>
+<main id="site">
+    <% if(!isAuthorized) { %>
+        <p class="text-center">
+            <a href="/auth" class="btn btn-primary btn-lg">Signin with Linkedin</a>
+        </p>
+    <% } else { %>
+        <form action="" method="post" id="share-form">
+            <div class="form-group mb-5">
+                <input type="text" name="title" id="title" placeholder="Title" class="form-control"> 
+            </div>
+            <div class="form-group mb-5">
+                <input type="text" name="url" id="url" placeholder="Share URL" class="form-control"> 
+            </div>
+            <div class="form-group mb-5">
+                <input type="text" name="thumb" id="thumb" placeholder="Share thumbnail URL" class="form-control"> 
+            </div>
+            <div class="form-group">
+                <textarea name="text" id="text" placeholder="Text" class="form-control"></textarea>
+            </div>
+            <p class="mt-5">
+                <input type="hidden" name="id" value="<%= id %>">
+                <input type="submit" value="Share" class="btn btn-primary btn-lg">
+            </p>
+        </form>
+    <% } %>
+</main>
+<script src="/public/js/jquery.min.js"></script>
+<script src="/public/js/index.js"></script>
+</body>
+</html>

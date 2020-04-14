@@ -1,0 +1,14 @@
+#site {
+    max-width: 600px;
+    padding: 0 1em;
+    margin: 10vh auto;
+}
+
+*:focus {
+    outline-style: none !important;
+    box-shadow: none !important;
+}
+
+#share-form textarea {
+    height: 200px;
+}
