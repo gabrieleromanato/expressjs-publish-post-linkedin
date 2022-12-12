@@ -13,7 +13,7 @@
     "body-parser": "^1.19.0",
     "cookie-session": "^1.4.0",
     "ejs": "^3.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "request": "^2.88.2",
     "validator": "^13.0.0"
   }
